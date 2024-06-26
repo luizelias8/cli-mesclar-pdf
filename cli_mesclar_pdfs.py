@@ -3,9 +3,9 @@ import os
 import glob
 from PyPDF2 import PdfMerger
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
-def mesclar_pdfs(caminho_saida, arquivos_entrada):
+def mesclar_pdfs(arquivos_entrada, caminho_saida):
     """Função para mesclar PDF usando PyPDF2."""
 
     try:
@@ -87,8 +87,8 @@ def obter_caminho_saida(caminho_saida):
 
 def main():
     parser = argparse.ArgumentParser(description='Mesclar arquivos PDF usando PyPDF2.')
-    parser.add_argument('-o', '--output', help="Caminho do arquivo PDF de saída. Se não fornecido ou se o caminho não existir, salvará como 'mesclado.pdf' no diretório atual.")
     parser.add_argument('pdfs', nargs='+', help='Lista de arquivos PDF ou diretórios contendo PDFs a serem mesclados.')
+    parser.add_argument('-o', '--output', help="Caminho do arquivo PDF de saída. Se não fornecido ou se o caminho não existir, salvará como 'mesclado.pdf' no diretório atual.")
     parser.add_argument('-v', '--version', action='version', version=f'%(prog)s {__version__}')
 
     args = parser.parse_args()
@@ -99,7 +99,7 @@ def main():
     # Coleta todos os PDFs dos caminhos fornecidos
     arquivos_entrada = coletar_pdfs(args.pdfs)
 
-    mesclar_pdfs(arquivo_saida, arquivos_entrada)
+    mesclar_pdfs(arquivos_entrada, arquivo_saida)
 
 if __name__ == '__main__':
     main()
