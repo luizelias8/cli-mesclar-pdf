@@ -1,4 +1,4 @@
-# CLI Mesclar PDF
+# CLI Mesclar PDFs
 
 ## Descrição
 
@@ -20,8 +20,8 @@ Script em Python que mescla vários arquivos PDF em um único PDF usando a linha
 
 1. Clone o repositório para sua máquina local:
 ```
-git clone https://github.com/luizelias8/cli-mesclar-pdf.git
-cd cli-mesclar-pdf
+git clone https://github.com/luizelias8/cli-mesclar-pdfs.git
+cd cli-mesclar-pdfs
 ```
 
 2. Instale as dependências necessárias:
@@ -42,17 +42,17 @@ Você pode utilizar o script diretamente da linha de comando. Abaixo estão os p
 
 Mesclando arquivos PDF específicos
 ```
-python cli_mesclar_pdf.py -o caminho/para/saida/mesclado.pdf caminho/para/arquivo1.pdf caminho/para/arquivo2.pdf
+python cli_mesclar_pdfs.py -o caminho/para/saida/mesclado.pdf caminho/para/arquivo1.pdf caminho/para/arquivo2.pdf
 ```
 
 Mesclando todos os PDFs de um diretório
 ```
-python cli_mesclar_pdf.py -o caminho/para/saida/mesclado.pdf caminho/para/diretorio
+python cli_mesclar_pdfs.py -o caminho/para/saida/mesclado.pdf caminho/para/diretorio
 ```
 
 Sem especificar o caminho de saída
 ```
-python cli_mesclar_pdf.py caminho/para/arquivo1.pdf caminho/para/arquivo2.pdf
+python cli_mesclar_pdfs.py caminho/para/arquivo1.pdf caminho/para/arquivo2.pdf
 ```
 O arquivo de saída será salvo como `mesclado.pdf` no diretório atual.
 
